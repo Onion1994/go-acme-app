@@ -21,7 +21,7 @@ func CorsMiddleware(next http.Handler) http.Handler {
 
 func main() {
     // Load configuration
-    config := config.LoadDatabaseConfig()
+    config := config.LoadDatabaseConfig(".env")
 
     // Initialize database
     dbRepo, err := initializeDatabase(config)

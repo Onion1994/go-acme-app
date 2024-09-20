@@ -5,8 +5,6 @@ COPY go.mod ./
 RUN go mod download && go mod verify
 RUN go build -o main .
 
-# Migrations stage
-#FROM alpine:3.14 AS migrations
 WORKDIR /app
 COPY migrations /app/migrations
 
